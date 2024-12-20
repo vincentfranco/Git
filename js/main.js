@@ -265,29 +265,34 @@
 
 })(jQuery);
 
+
+
+ddocument.addEventListener("DOMContentLoaded", function () {
+	const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+
+	dropdowns.forEach(dropdown => {
+		dropdown.addEventListener('mouseenter', function () {
+			const dropdownMenu = this.querySelector('.dropdown-menu');
+			dropdownMenu.classList.add('show');
+		});
+
+		dropdown.addEventListener('mouseleave', function () {
+			const dropdownMenu = this.querySelector('.dropdown-menu');
+			dropdownMenu.classList.remove('show');
+		});
+	});
+});
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    const dropdowns = document.querySelectorAll('.nav-item.dropdown');
+	const dropdownLink = document.querySelector("#treatmentsDropdown");
 
-    dropdowns.forEach(dropdown => {
-        dropdown.addEventListener('mouseenter', function () {
-            const dropdownMenu = this.querySelector('.dropdown-menu');
-            dropdownMenu.classList.add('show');
-        });
+	dropdownLink.addEventListener("click", function (event) {
+		const isDropdownOpen = this.parentElement.classList.contains("show");
 
-        dropdown.addEventListener('mouseleave', function () {
-            const dropdownMenu = this.querySelector('.dropdown-menu');
-            dropdownMenu.classList.remove('show');
-        });
-    });
-
-    const dropdownLink = document.querySelector("#navbarDropdown");
-
-    dropdownLink.addEventListener("click", function (event) {
-        const isDropdownOpen = this.parentElement.classList.contains("show");
-
-        // Allow navigation to treatments.html if the dropdown is being toggled
-        if (!isDropdownOpen) {
-            event.preventDefault();
-        }
-    });
+		// Prevent navigating to treatments.html if the dropdown is being toggled
+		if (!isDropdownOpen) {
+			event.preventDefault();
+		}
+	});
 });
