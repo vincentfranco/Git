@@ -296,33 +296,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
-
-		// gpt adin
-
-document.addEventListener("DOMContentLoaded", function () {
-    // Handle dropdown hover events
-    document.querySelectorAll('.nav-item.dropdown').forEach(dropdown => {
-        dropdown.addEventListener('mouseenter', function () {
-            this.classList.add('show');
-            this.querySelector('.dropdown-menu').classList.add('show');
-            this.querySelector('.nav-link.dropdown-toggle').setAttribute('aria-expanded', 'true');
-        });
-        dropdown.addEventListener('mouseleave', function () {
-            this.classList.remove('show');
-            this.querySelector('.dropdown-menu').classList.remove('show');
-            this.querySelector('.nav-link.dropdown-toggle').setAttribute('aria-expanded', 'false');
-        });
-    });
-
-    // Handle sub-dropdown hover events
-    document.querySelectorAll('.dropdown-submenu').forEach(submenu => {
-        submenu.addEventListener('mouseenter', function () {
-            const dropdownMenu = this.querySelector('.dropdown-menu');
-            dropdownMenu.classList.add('show');
-        });
-        submenu.addEventListener('mouseleave', function () {
-            const dropdownMenu = this.querySelector('.dropdown-menu');
-            dropdownMenu.classList.remove('show');
-        });
-    });
-});
