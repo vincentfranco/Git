@@ -9890,3 +9890,70 @@ textarea.form-control {
 .overlay {
     background: linear-gradient(to bottom, rgba(245, 240, 248, 0.5), rgba(0, 0, 0, 0.9));
 }
+
+/* Style for the dropdown-submenu */
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+.dropdown-submenu:hover .dropdown-menu {
+    display: block;
+}
+
+/* Custom gold color for dropdown items */
+.dropdown-item {
+    color: #3a1d33; /* Light gold color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for dropdown items */
+.dropdown-item:hover,
+.dropdown-item:focus {
+    color: #bfa24f; /* Darker gold color on hover */
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* Active dropdown item styling */
+.dropdown-item.active {
+    color: #d9bf77; /* Light gold color for active item */
+}
+
+.custom-navbar {
+    background-color: #5a2653; /* Replace with your desired color */
+}
+
+
+/* Custom gold color for the brand name */
+.navbar-brand {
+    color: #d9bf77 !important; /* Light gold color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.navbar-brand:hover {
+    color: #bfa24f !important; /* Darker gold color on hover */
+}
+
+/* Custom gold color for the navbar links */
+.navbar-nav .nav-link {
+    color: #d9bf77 !important; /* Light gold color */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the navbar links */
+.navbar-nav .nav-link:hover {
+    color: #bfa24f !important; /* Darker gold color on hover */
+}
+
+/* Active link styling */
+.navbar-nav .nav-link.active {
+    color: #d9bf77 !important; /* Light gold color for active link */
+}
